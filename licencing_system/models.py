@@ -64,6 +64,7 @@ class Customer:
     def remove_website(self, website):
         try:
             self._websites.remove(website)
+            del website
         except ValueError:
             raise WebsiteDoesNotExist(website)
 
